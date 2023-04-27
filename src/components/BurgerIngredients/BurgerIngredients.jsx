@@ -5,6 +5,8 @@ import {
   Counter,
 } from "@ya.praktikum/react-developer-burger-ui-components";
 import burgerIngredientsStyle from '../BurgerIngredients/BurgerIngredients.module.css';
+import { ingredientPropTypes } from '../utils/data';
+
 
 const IngredientsItem = ({ ingredient }) => {
   return (
@@ -24,7 +26,9 @@ const IngredientsItem = ({ ingredient }) => {
   );
 }
 
-
+IngredientsItem.propTypes = {
+  ingredient : ingredientPropTypes
+};
 
 const BurgersIngredients = (props) => {
     const [current, setCurrent] = React.useState('one')
@@ -86,5 +90,9 @@ const BurgersIngredients = (props) => {
       </div>
     )
   }
+
+BurgersIngredients.propTypes ={
+  props: ingredientPropTypes
+};
 
 export default BurgersIngredients;
