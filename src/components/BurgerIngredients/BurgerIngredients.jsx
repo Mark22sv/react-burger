@@ -4,14 +4,14 @@ import {
   CurrencyIcon,
   Counter,
 } from "@ya.praktikum/react-developer-burger-ui-components";
-import burgersIngredientsStyle from '../BurgerIngredients/BurgerIngredients.module.css'
+import burgerIngredientsStyle from '../BurgerIngredients/BurgerIngredients.module.css';
 
 const IngredientsItem = ({ ingredient }) => {
   return (
-    <div className={ burgersIngredientsStyle.card }>
-      <img className={ `${burgersIngredientsStyle.image} ml-4 mr-4` } src={ ingredient.image } alt="фото" />
-      <Counter className={ burgersIngredientsStyle.count } count={1} size="default" extraClass="m-1" />
-      <div className={ `${burgersIngredientsStyle.price} mt-1 mb-1` }>
+    <div className={ burgerIngredientsStyle.card }>
+      <img className={ `${burgerIngredientsStyle.image} ml-4 mr-4` } src={ ingredient.image } alt="фото" />
+      <Counter className={ burgerIngredientsStyle.count } count={1} size="default" extraClass="m-1" />
+      <div className={ `${burgerIngredientsStyle.price} mt-1 mb-1` }>
         <p>
           { ingredient.price }
         </p>
@@ -23,6 +23,7 @@ const IngredientsItem = ({ ingredient }) => {
     </div>
   );
 }
+
 
 
 const BurgersIngredients = (props) => {
@@ -47,11 +48,11 @@ const BurgersIngredients = (props) => {
             Начинки
           </Tab>
         </div>
-        <div className={ `${burgersIngredientsStyle.container} pt-10` }>
+        <div className={ `${burgerIngredientsStyle.container} pt-10` }>
           <h2 className="text text_type_main-medium">
             Булки
           </h2>
-          <ul className={ `${burgersIngredientsStyle.list} pt-6 pb-10` }>
+          <ul className={ `${burgerIngredientsStyle.list} pt-6 pb-10` }>
             {buns.map((item, index) => (
               <li key={index}>
                 <IngredientsItem ingredient={ item } />
@@ -62,7 +63,7 @@ const BurgersIngredients = (props) => {
           <h2 className="text text_type_main-medium">
             Соусы
           </h2>
-          <ul className={ `${burgersIngredientsStyle.list} pt-6 pb-10` }>
+          <ul className={ `${burgerIngredientsStyle.list} pt-6 pb-10` }>
             {sauces.map((item, index) => (
               <li key={index}>
                 <IngredientsItem ingredient={ item } />
@@ -73,7 +74,7 @@ const BurgersIngredients = (props) => {
           <h2 className="text text_type_main-medium">
             Начинки
           </h2>
-          <ul className={ `${burgersIngredientsStyle.list} pt-6 pb-10` }>
+          <ul className={ `${burgerIngredientsStyle.list} pt-6 pb-10` }>
           {mains.map((item, index) => (
             <li key={index}>
               <IngredientsItem ingredient={ item } />
